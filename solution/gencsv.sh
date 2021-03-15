@@ -7,3 +7,4 @@ do
 	NUMBER=$[ ( $RANDOM % $number_of_entries )  + 1 ]
 	echo `expr $i - 1`, $NUMBER >> inputFile
 done
+chmod +r inputFile
