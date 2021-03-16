@@ -1,0 +1,14 @@
+services:
+  csvserver:
+    ports:
+      - "9393:9300"
+    # image to fetch from docker hub
+    image: infracloudio/csvserver:latest
+
+    # Environment variables for startup script
+    environment:
+      - "CSVSERVER_BORDER=Orange"
+    # Mount volume 
+    volumes:
+      - "./inputFile:/csvserver/inputdata"
+    
