@@ -11,4 +11,11 @@ services:
     # Mount volume 
     volumes:
       - "./inputFile:/csvserver/inputdata"
-    
+  prometheus:
+    ports:
+      - "9090:9090"
+    # image to fetch from docker hub
+    image: prom/prometheus:v2.22.0
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+
